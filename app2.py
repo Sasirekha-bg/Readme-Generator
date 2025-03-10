@@ -89,13 +89,13 @@ if st.button("Fetch Repo Contents"):
 st.subheader("Generated README.md")
 st.text_area("README.md", st.session_state.readme_response, height=400)
 
-# # Chat interface for tweaking README
-# st.subheader("Chat with the README Generator")
-# user_message = st.text_input("Ask a question or request a change:")
-# if st.button("Send") and user_message:
-#     agent = Agent(model=Groq(id="qwen-2.5-32b"))
-#     chat_response = agent.run(user_message)
-#     st.text_area("Agent Response", chat_response.content, height=200)
+# Chat interface for tweaking README
+st.subheader("Chat with the README Generator")
+user_message = st.text_input("Ask a question or request a change:")
+if st.button("Send") and user_message:
+    agent = Agent(model=Groq(id="qwen-2.5-32b"))
+    chat_response = agent.run(user_message)
+    st.text_area("Agent Response", chat_response.content, height=200)
 
 # Clean up repo_contents folder after use
 if os.path.exists("repo_contents"):
