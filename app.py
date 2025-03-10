@@ -79,4 +79,4 @@ if st.button("Fetch Repo Contents"):
 
     st.subheader("Generated README.md")
     response = agent.run(readme_prompt)
-    st.text_area("README.md", response.content, height=400)
+    st.text_area("README.md", response.content, height=800)
