@@ -1,0 +1,8 @@
+agno
+groq
+google
+apify-client
+requests
+openai
+python-dotenv
+streamlit
